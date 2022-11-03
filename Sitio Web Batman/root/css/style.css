@@ -1,0 +1,65 @@
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.encabezado {
+    background-color: #e6e6e6;
+    text-align: center;
+
+
+}
+
+img {
+    
+
+
+
+
+}
+
+
+.titulo {
+    font-family: 'Times New Roman', Times, serif;
+    color: #005677;
+    background-color: #c4c4c4;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+
+#tituloPrincipal {
+        font-size: 35px;
+        font-weight: 700;
+        ;
+}
+
+#margen {
+        margin-left: 80px;
+
+}
+
+
+.piePagina {
+        font-size: 20px;
+        font-weight: 700;
+}
+
+#pie {
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffff;
+    background-color: #005677;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 170%;
+}
+
+.imgPie
+        {
+        letter-spacing: 50px;
+        text-align: center;
+            
+}
