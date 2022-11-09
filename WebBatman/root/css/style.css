@@ -1,0 +1,224 @@
+*
+{
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+width: 1024px;
+height: 1024px;
+background: #FFFFFF;
+align-items: center;
+}
+.encabezado1 {
+    position: absolute;
+width: 1659px;
+height: 38px;
+left: -10px;
+top: -9px;
+background: #1CD1B0;
+}
+h3 {
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+width: 111px;
+height: 18px;
+left: 27px;
+top: -3px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+color: #000000;
+}
+.encabezado2 {
+    box-sizing: border-box;
+
+position: absolute;
+width: 1659px;
+height: 101px;
+left: -10px;
+top: 29px;
+
+background: #00669F;
+box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.25);
+}
+.encabezado2 #título {
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+width: 128px;
+height: 47px;
+left: 28px;
+top: 0px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 47px;
+/* identical to box height */
+
+color: #000000;
+}
+.caja1 {
+    position: relative;
+width: 300px;
+height: 336px;
+margin: 100px;
+padding: 40px;
+top: 380px;
+left: 170px;
+
+background: #F3F3F3;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+display: inline-block;
+}
+.imgbox #fondo1 {
+    margin: -300px 0px 50px -40px;
+}
+.imgbox #foto1 {
+    overflow: hidden;
+    border-radius: 60px;
+    margin: -200px 0px 10px 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.caja1 h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0px
+}
+.caja1 p {
+    font-family: 'Roboto', sans-serif;
+    margin: 5px 10px 10px -20px;
+    text-align: left;
+    width: 250px;
+    
+}
+.caja1 #boton1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    height: 50px;
+    width: 115px;
+    margin-top: 15px;
+    padding: 15px 0px;
+    margin-left: 55px;
+    background-color: #00669F;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.caja2 {
+    position: relative;
+width: 300px;
+height: 336px;
+margin: 100px;
+padding: 40px;
+top: 380px;
+left: 66px;
+
+background: #F3F3F3;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+display: inline-block;
+}
+.imgbox #fondo2 {
+    margin: -300px 0px 50px -40px;    
+}
+.imgbox #foto2 {
+    overflow: hidden;
+    border-radius: 60px;
+    margin: -200px 0px 10px 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.caja2 h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0px
+}
+.caja2 p {
+    font-family: 'Roboto', sans-serif;
+    margin: 5px 10px 10px -20px;
+    text-align: left;
+    width: 250px;
+    
+}
+.caja2 #boton2 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    height: 50px;
+    width: 115px;
+    margin-top: 15px;
+    padding: 15px 0px;
+    margin-left: 55px;
+    background-color: #00669F;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.caja3 {
+    position: relative;
+    width: 300px;
+    height: 336px;
+    margin: -600px 100px 100px 1070px; 
+    padding: 40px;
+    top: 230px;
+    
+    background: #F3F3F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: inline-block;
+}
+.imgbox #fondo3 {
+    margin: -300px 0px 50px -40px;
+}
+.imgbox #foto3 {
+    overflow: hidden;
+    border-radius: 60px;
+    margin: -200px 0px 10px 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.caja3 h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0px
+}
+.caja3 p {
+    font-family: 'Roboto', sans-serif;
+    margin: 5px 10px 10px -20px;
+    text-align: left;
+    width: 250px;
+    
+}
+.caja3 #boton3 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    height: 50px;
+    width: 115px;
+    margin-top: 15px;
+    padding: 15px 0px;
+    margin-left: 55px;
+    background-color: #00669F;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+footer {
+    margin-top: 315px;
+}
+.pie {
+    box-sizing: border-box;
+    position: absolute;
+    background-color: #00669F;
+    width: 1659px;
+    left: -10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.pie h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    margin-left: 20px;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+text-align: left;
+}
