@@ -84,6 +84,9 @@ display: inline-block;
     margin: -200px 0px 10px 50px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+.imgbox #vector1 {
+    margin: -310px 0px 218px -192px;
+}
 .caja1 h1 {
     font-family: 'Roboto', sans-serif;
     text-align: center;
@@ -130,6 +133,9 @@ display: inline-block;
     margin: -200px 0px 10px 50px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+.imgbox #vector2 {
+    margin: -310px 0px 218px -192px;
+}
 .caja2 h1 {
     font-family: 'Roboto', sans-serif;
     text-align: center;
@@ -174,6 +180,9 @@ display: inline-block;
     border-radius: 60px;
     margin: -200px 0px 10px 50px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.imgbox #vector3 {
+    margin: -310px 0px 218px -192px;
 }
 .caja3 h1 {
     font-family: 'Roboto', sans-serif;
