@@ -67,7 +67,7 @@ form{
     display: flex;
     flex-wrap: wrap;
     width: 95%;
-    padding: 0 3rem;
+    padding: 0 1rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -144,14 +144,14 @@ hr{
     margin-bottom: 10px;
 }
 .submit{
-    display: flex;
+isplay: flex;
     justify-content: center;
     align-items: center;
 
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10px;
-    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-top: 100px;
 
 }
 button{
