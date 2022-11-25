@@ -1,0 +1,213 @@
+/* A Estilos Generales*/
+
+/* A 1- Antes de empezar a jugar con el CSS lo ideal es definir las variables con las que se van a estar trabajando, por ejemplo los colores, así es más fácil utilizarlos a lo largo del proyecto.
+
+Las variables en CSS se declaran por lo general dentro del selector :root para que sean globales. En este caso definí los tres colores que usaré en todo el menú dentro de este selector. Siéntete libre de utilizar tus colores favoritos o los que creas convenientes. */
+
+:root {
+    --primary: #E5E5E5;
+    --brownclear: #F0A83E;
+    --brown: #3C2313;
+    --gray: #2a324b;
+}
+
+/* A 2-El siguiente paso es restablecer los valores de los elementos, ya que los navegadores tienden a incluir algunos estilos por defecto. La manera más apropiada de restablecer estos valores es hacer uso de una librería como Normalize.css, te recomiendo usarla para tus proyectos.
+
+En este caso no haré uso de ella para simplificar el código y simplemente definiré que los margin y padding de todos los elementos sean cero.
+
+Por otro lado, el box-sizing: border-box le dice al navegador que tome en cuenta los border y padding para el width y height de los elementos.*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* A 3-Continuando con los estilos generales, para el simplemente hay que definir propiedades relacionadas a la fuente y al color de letra y de fondo.*/
+
+body {
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: var(--white);
+    background-color: var(--primary);
+    height: 100vh;
+}
+
+/* A 4) El único estilo que se le agregará al .nav que es el elemento border-bottom y background-color
+
+es un borde inferior, que si recuerdas la imagen del menú es esa línea gris tenue para separar al menú de otros elementos.*/
+
+.nav {
+    background-color: var(--brownclear);
+    border-bottom: 1px solid var(--gray);
+}
+
+/* A 5) Para terminar con los estilos generales, ocultaremos el input al cual le pusimos la clase .nav__checkbox para que no se muestre en el navegador, ya que de este input solo nos interesa su funcionalidad y no la visibilidad del elemento.*/
+
+.nav_checkbox {
+    display: none;
+}
+
+
+
+
+
+
+
+/* B  Crear los estilos para la etiqueta label*/
+
+/* B 1- La etiqueta como ya viste en el HTML es la que contiene los iconos con los que se interactuará cuando el menú esté en su versión móvil. Por lo tanto, se define el position como absolute para poder cambiar su posición por defecto a una más adecuada.*/
+
+.nav_toggle {
+    position: absolute;
+    cursor: pointer;
+    margin: 1rem;
+    right: 0;
+}
+/* B 2- Por otro lado, los SVG son demasiado grandes, así que cambiamos su tamaño y el color al blanco que está definido en las variables declaradas al inicio. De esta forma los iconos se verán más integrados al diseño definido.*/
+
+.nav_toggle svg {
+    width: 1rem;
+    fill: var(--white);
+}
+
+/* B 3- Como por defecto el icono que se va a ver es el del menú, se oculta el icono de cierre con la propiedad de display en none.*/
+
+.nav_toggle .close {
+    display: none;
+}
+
+/* B 4- Para finalizar con los estilos de esta sección, a ambos iconos se les agrega un margin-top para mejorar el espaciado entre el resto de elementos.*/
+
+.nav_toggle .close,
+.nav_toggle .menu {
+    margin-top: 0.3rem;
+}
+
+
+
+
+
+
+
+
+/* C Crear los estilos para el menú*/
+
+/* C 1-Toca trabajar con los estilos del menú, el cual no es otra cosa que la lista desordenada que contenía los ítems de navegación.
+
+El primer paso es cambiar la orientación de los ítems de horizontal a vertical, para esto se usa la propiedad de display: flex acompañada de flex-direction: column como se muestra en los estilos.*/
+
+.nav_menu {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 10px;
+    margin: 0rem;
+}
+
+/* C 2-Lo siguiente es remover los * propios de las listas con la propiedad list-style-type en none y ocultar todos los ítems que después se mostrarán con la interacción del menú.*/
+
+.nav_menu li {
+    display: none;
+    list-style-type: none;
+    color: white;
+}
+
+/* C 3- Como puedes notar el logo de Platzi había quedado centrado porque también era un ítem de la lista y además desapareció, pero este siempre debe de estar visible porque es parte de la marca.
+
+Para hacerlo visible y posicionarlo a la izquierda como estaba anteriormente se hace uso de la pseudo-clase :first-child para afectarlo únicamente a él por ser el primer elemento. Dentro del esta declaración el display es cambiado a block y se indica que el margin-right debe de ser auto.
+
+Listo, ahora el logo del Petshop sigue siendo visible y está posicionado correctamente.*/
+
+.nav_menu li:first-child {
+    display: block;
+    margin-right: auto;
+}
+
+/* C 4- Antes de desaparecer los ítems de la lista, al ser enlaces tenían el estilo y color predeterminado lo cual no es homogéneo con el diseño propuesto. Para ajustar esto solo hay que cambiar el color de la etiqueta y definir el text-decoration como none.*/
+
+.nav_menu a {
+    color: inherit;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+.nav_menu a:hover{
+    color: black;
+}
+
+/* C 5-Para finalizar con los estilos del menú, el icono de hamburguesa se ve pequeño en comparación del logo, lo cual es muy fácil de resolver, únicamente hay que ajustar el height de este elemento. */
+
+.menu_logo {
+    height: 30px;
+}
+.menu_logo img {
+    height: 100%;
+}
+
+
+
+
+
+
+
+/* D Incluir la interacción del menú con el checkbox*/
+
+/* D 1- El menú ya está construido, ahora cuando el usuario de clic al icono del menú lo que debe de pasar es que el menú se despliegue y se muestren los ítems que ocultamos en el paso anterior.
+
+Seguramente te estás preguntando cómo podemos hacer eso sin tener un EventListener de JavaScript escuchando, pero créeme que no es necesario.
+
+Al estar usando un 
+ de tipo checkbox se puede validar su estado con la pseudo-clase :checked, la cual indica si está seleccionado o no, como si fuera un if en cualquier otro lenguaje de programación.
+
+Sabiendo esto podemos decir que si el checkbox esta seleccionado, el elemento ul.nav__menu li que no es otra cosa que nuestra lista de ítems debe de tener su display a block. Todo esto se representa en el código siguiente. */
+
+#nav_checkbox:checked ~ ul.nav_menu li {
+    display: block;
+}
+
+/* D 2- De igual forma si está seleccionado, al icon que tiene la clase .close también le cambiamos su display a block, para que se muestre la X cuando los ítems se muestren.*/
+
+#nav_checkbox:checked ~ label.nav_toggle .close {
+    display: block;
+}
+
+/* D 3- ya por último cambiamos el display del .menu a none para que solo se muestre el icono de X y se oculte el de hamburguesa.*/
+
+#nav_checkbox:checked ~ label.nav_toggle .menu {
+    display: none;
+}
+
+
+
+
+
+
+
+
+/* E Definir las media queries para que el menú sea responsivo*/
+
+/* E 1- Y ahora sí, como último paso toca crear las media queries para que en dispositivos grandes se muestre el menú extendido y no el desplegable.
+
+Para esto hay que definir una media query que a partir de los 560px de width aplique los estilos que queramos, como cambiar los display de algunos elementos y también el flex-direction del menú a row para que ahora los ítems estén en horizontal.*/
+
+@media only screen and (min-width: 560px) {
+    .nav_toggle {
+        display: none;
+    }
+
+    .nav_menu {
+        flex-direction: row;
+    }
+
+    .nav_menu li {
+        display: block;
+    }
+}
+
+/*Una vez agregados estos estilos si visualizamos el menú en una ventana pequeña se mostrará el menú desplegable, si lo visualizamos en una mayor a 560px, entonces aparecerá el menú extendido.
+
+Listo, con esto ya sabes crear un menú completamente responsivo e interactivo con únicamente CSS y HTML, la magia ha sido develada y los poderes ahora son tuyos para dominar la web en dispositivos pequeños y grandes.*/
+
+
+

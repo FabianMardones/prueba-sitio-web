@@ -144,7 +144,7 @@ hr{
     margin-bottom: 10px;
 }
 .submit{
-isplay: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 
@@ -152,7 +152,6 @@ isplay: flex;
     margin-right: auto;
     margin-bottom: 20px;
     margin-top: 100px;
-
 }
 button{
     width: 300px;
@@ -160,6 +159,9 @@ button{
     font-size: 50px;
     border-radius: 10px;
     background-color:  #1CD1B0;
+}
+button:hover{
+    background-color: aquamarine;
 }
 footer{
     display: flex;
