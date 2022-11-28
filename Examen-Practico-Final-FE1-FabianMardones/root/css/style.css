@@ -1,0 +1,175 @@
+/*en primer lugar seleccionaré los colores principales que tendrá mi página junto con los estilos generales que usaré en ella*/
+:root {
+    --primary: #F5F5F5;
+    --blusky: #3CDDF3;
+    --violet: #8B48BF;
+    --blumarine: #1E1E26;
+    --blue: #242E52;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 400, 500, 700;
+    color: var(--blumarine);
+    background-color: var(--primary);
+    height: 100vh;
+}
+.nav {
+    margin: 15px;
+    height: 80px;
+    background-color: var(--primary);
+    border-bottom: 1px solid var(--blumarine);
+}
+.nav_checkbox {
+    display: none;
+}
+.nav_toggle {
+    position: absolute;
+    cursor: pointer;
+    margin: 1rem;
+    right: 0;
+}
+.nav_toggle svg {
+    margin: 0 50px;
+    width: 2rem;
+}
+.nav_toggle .close {
+    display: none;
+}
+.nav_toggle .close,
+.nav_toggle .menu {
+    margin-top: 0.3rem;
+}
+.nav_menu {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 10px;
+    margin: 0rem;
+}
+.nav_menu li {
+    display: none;
+    list-style-type: none;
+    color: var(--blue);
+}
+.nav_menu li:first-child {
+    display: block;
+    margin-right: auto;
+}
+.nav_menu a {
+    color: inherit;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+.nav_menu a:hover{
+    color: black;
+}
+.menu_logo {
+    height: 60px;
+}
+.menu_logo svg {
+    height: 100%;
+}
+#nav_checkbox:checked ~ ul.nav_menu li {
+    display: block;
+}
+#nav_checkbox:checked ~ label.nav_toggle .close {
+    display: block;
+}
+#nav_checkbox:checked ~ label.nav_toggle .menu {
+    display: none;
+}
+
+
+
+
+.section1 {
+    display: flex;
+    justify-content: center;
+}
+
+.img img{
+    width: 400px;
+    margin-bottom: 30px ;
+}
+.section1 .img h1{
+    width: 410px;
+    height: 228px;
+    text-align: right;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--blue);
+}
+.section1 .img p{ 
+    margin: 40px 0;
+    width: 400px;
+    height: 71x;
+    text-align: right;
+}
+.button{
+    display: flex;
+    justify-content: flex-end;
+}
+button{
+    background-color:var(--violet);
+    color: var(--primary);
+    width: 130px;
+    border-radius: 50px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(75, 54, 75)
+}
+
+
+
+
+
+.between{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blusky);
+    margin-top: 50px;
+    height: 306px;
+    width: 100%;
+}
+.between h2{
+    margin-top: 40px;
+    text-align: start;
+    font-weight: 700;
+    width: 410px;
+    height: 150px;
+    font-size: 36px;
+    color: var(--primary);
+}
+.between p{
+    margin-top: 40px;
+    text-align: start;
+    font-weight: 500;
+    width: 410px;
+    height: 150px;
+    font-size: 16px;
+    color: var(--primary);
+}
+
+
+
+
+
+
+
+
+
+
+
+
