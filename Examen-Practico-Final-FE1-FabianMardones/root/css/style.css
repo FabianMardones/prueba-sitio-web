@@ -17,6 +17,7 @@ body {
     color: var(--blumarine);
     background-color:  #FFFFFF;
     height: 100%;
+    width: 100%;
 }
 
 header{
@@ -43,11 +44,6 @@ header button{
 }
 
 
-
-body{
-    height: 100%;
-    width: 100%;
-}
 .section1 {
     display: flex;
     justify-content: space-around;
@@ -55,7 +51,8 @@ body{
     flex-direction: column;
 }
 
-.img img {
+.section1 .img img {
+    position: relative;
     width: 400px;
     height: 341px;
     margin-bottom: 30px ;
@@ -233,59 +230,68 @@ button:hover{
     margin-top: 0;
     background-color: var(--blumarine);   
 }
-footer{
+.navlinks {
     width: 100%;
-    height: 534px;
-    padding: 40px 0 40px 0px;
+    height: 450px;
     background-color: #1E1E26;
-    color: #FFFFFF;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
 }
 form{
-    display: flex;
-    justify-content: center;
-} 
+}
 input{
-    border-radius: 20px;
+    height: 44px;
     width: 308px;
-}  
+    border-radius: 50px;
+}
 form button{
     width: 63px;
-    margin-left: 10px;
+    height: 42px;
 }
-footer nav{
-    height: 200px;
-    width: 400px;
-    margin-top: 30px;
+.list {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     flex-wrap: wrap;
+    flex-direction: column;
+    height: 170px;
+    width: 250px;
+    margin-right: 200px;
+    margin-bottom: 30px;
+    margin-top: 20px;
 }
-footer nav li{
+.list li {
     margin: 10px 70px;
-    list-style-type: none;
 }
-footer .icon{
-    height: 20px;
+.list li a{
+    text-decoration: none;
+    color:#FFFFFF
+}
+.icon{
     display: flex;
     justify-content: center;
-    align-items: center;
+    height: 50px;
 }
-footer .icon a{
+.icon a{
     margin: 0 35px;
 }
-footer .logofooter{
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.copy{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.logofooter{
+    margin-top: 10px;
 }
 
+
+
+footer{
+    height: 84px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #1E1E26;
+}
+footer p{
+    color: #FFFFFF;
+}
 
 
 
@@ -294,6 +300,12 @@ footer .logofooter{
 
 
 @media only screen and (min-width: 900px) {
+    
+    header{
+        height: 150px;
+        margin: 0 100px;
+    }
+
     header .menu-hamburguesa {
         display: none;
     }
@@ -316,12 +328,12 @@ footer .logofooter{
         max-width: 80%;
         margin: 50px 200px;
     }
-    .img img {
+    .section1 .img img {
         width: 540px;
         height: 461px;
     }
     .section1 h1{
-        width: 500px;
+        width: 530px;
     }
     .section1 p{
         width: 500px;
@@ -382,17 +394,70 @@ footer .logofooter{
         background-color: #FAFAFA;
         height: 200px;
         margin: 0px;
-        }
+    }
     
-        .section3 .sanyo{
-            position: relative;
-            display: block;
-        }
+    .section3 .sanyo{
+        position: relative;
+        display: block;
+    }
 
-        .section3 .navarro{
-            position: relative;
-            display: block;
-        }
+    .section3 .navarro{
+        position: relative;
+        display: block;
+    }
+
+
+
+
+    .navlinks{
+        height: 224px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    form{
+        margin-bottom: 70px;
+        margin-right: 130px;
+    }
+    input {
+        height: 40px;
+        width: 160px;
+    }
+    .list{
+        margin-top: 70px;
+    }
+    .list li{
+        margin: px;
+    }
+    .logofooter{
+        margin-left: 110px;
+        margin-top: 70px;
+    }
+    .icon{
+        margin-left: 150px;
+        margin-top: 70px;
+    }
+    .icon a{
+        margin: 0 5px;
+    }
+
+    footer{
+        display: flex;
+        justify-content: flex-end;
+        height: 50px;
+    }
+    footer p {
+        margin: 0 150px;
+    }
+
+}
+
+
+
+
+
+
         
 
 
