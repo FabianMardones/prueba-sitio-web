@@ -1,24 +1,45 @@
-/*en primer lugar seleccionaré los colores principales que tendrá mi página junto con los estilos generales que usaré en ella*/
+/* A en primer lugar seleccionaré los colores principales que tendrá mi página junto con los estilos generales que usaré en ella*/
+
 :root {
-    --primary: #F5F5F5;
+    --white: #FFFFFF;
+    --encabezado:#242E52;
+    --h1: #232C50;
+    --PheaderYh: #000000;
     --blusky: #3CDDF3;
     --violet: #8B48BF;
-    --blumarine: #1E1E26;
-    --blue: #242E52;
+    --blumarine: #1E1E26; 
+    --titlesection2: #323851;
+    --Psection2: #B3B2B7;
+    --titlesection3: #242E53;
+    --barrasection2: rgba(139, 72, 191, 0.3);
+    --nameplayer: #3F4868;
+    --Pplayer: #B9B9C1;
+    --hoverbutton: rgba(139, 72, 191, 0.7);
+    --backnavf: #1E1E26;
+    --backcard: #FAFAFA;
+    --footer: #8C8C94;
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+h1{font-weight: 700;}
+h2{font-weight: 500;}
+h3{font-weight: 700;}
+h4{font-weight: 400 bold;}
+p{font-weight: 400;}
+li a{font-weight: 400;}
+
 body {
     font-family: 'Be Vietnam Pro', sans-serif;
-    font-weight: 400, 500, 700;
     color: var(--blumarine);
-    background-color:  #FFFFFF;
+    background-color: var(--white);
     height: 100%;
     width: 100%;
 }
+
+/* B luego continua ciertas directrices para el contenedor header y con las de los subcontenedores, tanto en comportamiento como en diseño para lograr tener el logo a la izquierda, una barra de navegación al medio y el botón y/el menu de hamburguesa a la derecha, espaciados para distinguir su contenido*/
 
 header{
     display: flex;
@@ -28,14 +49,20 @@ header{
 }
 nav{
     display: flex;
+    font-size: 13px;
 }
 header nav li{
     list-style-type: none;
-    margin: 10px;
+    margin: 0 20px;
 }
 header nav li a{
     text-decoration: none;
+    color: var(--encabezado);
 }
+header nav li a:hover{
+    color: rgba(36, 46, 82, 0.6);
+}
+
 header nav{
     display: none;
 }
@@ -43,6 +70,7 @@ header button{
     display: none;
 }
 
+/* C luego decidí dividir por secciones, y tenemos en la primera una imagen y una información con título, escritura y un botón, en first mobile dejamos todo en una columna y en desktop es hacer un wrap (que se verá más abajo) para que la imagen quede al lado izquierdo de la pantalla y los textos con el botón al ldo derecho*/
 
 .section1 {
     display: flex;
@@ -61,23 +89,23 @@ header button{
     width: 410px;
     height: 228px;
     text-align: right;
-    font-family: 'Be Vietnam Pro', sans-serif;
     font-size: 50px;
-    font-weight: 700;
-    color: var(--blue);
+    color: var(--h1);
 }
 .section1 p{ 
     margin: 40px 0;
     width: 400px;
     height: 71x;
     text-align: right;
+    color: var(--PheaderYh);
+    
 }
 .button{
     margin-left: 140px;
 }
 button{
     background-color:var(--violet);
-    color: var(--primary);
+    color: var(--white);
     width: 130px;
     border-radius: 50px;
     height: 40px;
@@ -85,12 +113,10 @@ button{
     cursor: pointer;
 }
 button:hover{
-    background-color: rgb(75, 54, 75)
+    background-color: var(--hoverbutton)
 }
 
-
-
-
+/* D luego tenemos un bloque en la página, que divide informaciones y que también se colocará el título arriba y el texto abajo (columna)*/
 
 .between{
     display: flex;
@@ -105,34 +131,30 @@ button:hover{
 .between h2{
     margin-top: 40px;
     text-align: start;
-    font-weight: 700;
     width: 410px;
     height: 150px;
     font-size: 36px;
-    color: var(--primary);
+    color: var(--white);
 }
 .between p{
     margin-top: 40px;
     text-align: start;
-    font-weight: 500;
     width: 410px;
     height: 150px;
     font-size: 16px;
-    color: var(--primary);
+    color: var(--white);
 }
 .between .textdesktop{
     display: none;
 }
 
-
-
+/* E en esta parte tenemos la sección2, la cual se hizo un wrap adelantado, para que cuando se coloque en 480px se junten todas las cards en una línea vertical, en esta ocación el título, preferí dividirlo en un h4 y un strong para poder tener ambos en la misma línea y darle un formato distinto a cada uno*/
 
 .section2{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: #FAFAFA;
 
 }
 .card{
@@ -146,7 +168,7 @@ button:hover{
     padding-top: 10px;
     padding-bottom: 30px;
     border-radius: 10px;
-    background-color: #ebd9f8;
+    background-color: var(--barrasection2);
 }
 .card strong{
     padding: 10px 20px;
@@ -161,31 +183,34 @@ button:hover{
     width: 408px;
     height: 130px;
     font-size: 16px;
-    color: #B3B2B7;
-    font-weight: 500;
+    color: var(--Psection2);
 }
 
-
-
+/* F el título de las card, por una cuestión de practicidad, preferí colocarlo fuera de la sección pero apuntando directamente a ella, por un tema de énfasis y espacio y a la vez me fue más complejo ponerlo todo junto*/
 
 .titulo{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    text-align: center;
+    height: 100px;
+    font-size: 25px;
+    margin-bottom: 100px;
 }
+
+/* G la sección3 está diseñada con 3 cards de los mejores tenistas del mes, en first móbile sólo se verá una de las 3 por un tema de espacio las otras dos serán ocultas hasta después de los 900px y cada una con un botón*/
+
 .section3{
     display: flex;
     justify-content: center;
     text-align: center;
-    height: 400px;
+    height: 360px;
     width: 100%;
 }
 .section3 .card{
     position: absolute;
-    background-color: #FAFAFA;
+    background-color: var(--backcard);
     height: 200px;
-    margin: 0px;
 }
 .section3 .card img{
     margin-top: -35px;
@@ -194,7 +219,11 @@ button:hover{
     margin: 20px;
 }
 .section3 .card p{
+    color: var(--Pplayer);
     margin: 20px 0;
+}
+.section3 button{
+    margin-top: 40px;
 }
 .section3 .sanyo{
     position: relative;
@@ -205,9 +234,7 @@ button:hover{
     display: none;
 }
 
-
-
-
+/* H luego sigue otro "entre" o between esta vez llamado "2" que sigue los mismo patrones del anterior, pero que se diferencia por un botón centrado*/
 
 .between2{
     display: flex;
@@ -217,35 +244,40 @@ button:hover{
     background-color: var(--blusky);
     height: 366px;
 }
-
 .between2 h2{
-    width: 324px;
+    width: 320px;
     height: 192px;
-    font-weight: 700;
     font-size: 40px;
     text-align: center;
-    color: #fff;
+    color: var(--white);
 }
 .between2 button{
-    margin-top: 0;
-    background-color: var(--blumarine);   
+    background-color: var(--h1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 }
+.between2 button:hover{
+    background-color: var(--violet)
+}
+
+/* I luego antes del footer, no sabía si dejar todo como footer o no, pero preferí por un tema de enredo, ya que me llevó 6 horas resolver esto, separar a una sección de navegación escrito en HTML de forma inversa a los mostrado en la imagen, para que fuera más fácil con un column-rever manipularlo y pensando en ordenarlo en desktop y que no fuera tan dificil, tenemos un formulario, iconos, el logo, y elementos de navegación*/
+
 .navlinks {
     width: 100%;
     height: 450px;
     background-color: #1E1E26;
-
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
 }
-form{
+label{
+    display: none;
 }
 input{
     height: 44px;
     width: 308px;
     border-radius: 50px;
+    padding: 10px;
 }
 form button{
     width: 63px;
@@ -266,7 +298,10 @@ form button{
 }
 .list li a{
     text-decoration: none;
-    color:#FFFFFF
+    color:var(--white);
+}
+.list li a:hover{
+    color: rgba(216, 224, 254, 0.6);
 }
 .icon{
     display: flex;
@@ -280,7 +315,7 @@ form button{
     margin-top: 10px;
 }
 
-
+/* J por último, el footer, charaaaaan!! jaja fin*/
 
 footer{
     height: 84px;
@@ -290,22 +325,23 @@ footer{
     background-color: #1E1E26;
 }
 footer p{
-    color: #FFFFFF;
+    color: var(--footer);
+    font-size: 12.5px;
 }
 
+/* luego de todo el sieño mobile first, nos pasamos a la media query, decidí ponerlo de 780px para que al momento de ampliar desde el costado del navegador, se vea más bonito entonces de 480 se verá perfect, y de 1440 también*/
 
+@media only screen and (min-width: 780px) {
 
+    /* A edtiamos el header, para que al momento de contraer la página, se escondan los elementos de navegación junto al botón y quede sólo el logo al lado izquierdo y el menú de hamburguesa al lado derecho*/
 
-
-
-
-@media only screen and (min-width: 900px) {
-    
     header{
         height: 150px;
         margin: 0 100px;
     }
-
+    header nav li a:hover{
+        color: rgba(36, 46, 82, 0.6);
+    }
     header .menu-hamburguesa {
         display: none;
     }
@@ -316,8 +352,11 @@ footer p{
 
     header button {
         display: block;
+        box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
     }
-    
+
+/* B luego como mencionaba anteriormente en el first mobile, aquí le damos flexwrap y le damos los límites para su movimiento y lo estiramos hasta que quede la imagen en el lado derecho y el texto junto al botón al lado derecho, podría haberlo hecho con flex-direction: row; pero se ve tan bonito que prefiero no desarmar nada XD*/
+
     .section1 {
         display: flex;
         flex-wrap: wrap;
@@ -336,13 +375,16 @@ footer p{
         width: 530px;
     }
     .section1 p{
-        width: 500px;
+        width: 530px;
     }
     .section1 .button{
         width: 130px;
-        margin-right: 50px;
-
+        margin-right: 20px;
     }
+
+/* C cambiamos de columna a bloque con row y cambiamos el color de fondo junto con ocultar el texto del lado derecho y mostrar otro indicado en el HTML*/
+
+    
     .between {
         background-color: var(--violet);
         display: flex;
@@ -364,13 +406,48 @@ footer p{
         margin-left: 100px;
         margin-top: 50px;
     }
-    .section2 h4{
-        background-color: #F5F5F5;
 
+/* D cambiamos el color de las barras del h4 para que se camufle con el fondo*/
+
+    .section2 {
+        background-color: var(--backcard);
+    }
+    .section2 h4{
+        background-color:var(--backcard)
     }
     .section2 p{
         margin-left: 50px;
     }
+
+/* E el título lo ponemos más grande para que luzca mejor en tamaño desktop*/
+
+    .titulo{
+        height: 100px;
+        margin-top: 70px;
+        font-size: 30px;
+    }
+
+/* F creé otras cards para no confundirme y las apilamos todas como el bosquejo, para que se vea una línea de los tenistas, dejando el botón un poco más arriba y mostrando a los dos tenistas ocultos en first mobile*/
+
+    .section3 .card{
+        position: relative;
+        background-color: #FAFAFA;
+        width: 450px;
+        height: 210px;
+        margin: 0px;
+    }
+
+    .section3 .sanyo{
+        position: relative;
+        display: block;
+    }
+    .section3 .navarro{
+        position: relative;
+        display: block;
+    }
+
+/* G nuevamente cambiamos el "entre" de column a row, dejando un bloque con dos espacios, a la izquierda el título y a la derecha el botó*/
+
     .between2 {
         background-color: var(--violet);
         display: flex;
@@ -389,25 +466,11 @@ footer p{
         background-color: #FFFFFF;
         color: var(--violet);
     }
-    .section3 .card{
-        position: relative;
-        background-color: #FAFAFA;
-        height: 200px;
-        margin: 0px;
-    }
-    
-    .section3 .sanyo{
-        position: relative;
-        display: block;
+    .between2 button:hover{
+        background-color: aquamarine;
     }
 
-    .section3 .navarro{
-        position: relative;
-        display: block;
-    }
-
-
-
+/* H esta fue la peor parte, jaja, pareció como jugar a un puzzle, 6 horas estve en esto hasta que con un simple movimiento lo logré gracias a Dios, me dormí a las 2am así que no lo muevas XD (cambié el color en el HTML de los SVG del logo fill:#FFFFF)*/
 
     .navlinks{
         height: 224px;
@@ -422,7 +485,7 @@ footer p{
     }
     input {
         height: 40px;
-        width: 160px;
+        width: 180px;
     }
     .list{
         margin-top: 70px;
@@ -442,6 +505,8 @@ footer p{
         margin: 0 5px;
     }
 
+/* I por último el footer, eso... jajaja XD fin*/
+
     footer{
         display: flex;
         justify-content: flex-end;
@@ -450,15 +515,15 @@ footer p{
     footer p {
         margin: 0 150px;
     }
-
 }
+/*quiero mencionar en esta nota, que jamás en mi vida tuve noción de programación legué desde -20 XD ni si quiera desde 0 y siento que he aprendido muchísimo en estos dos meses, gracias por ser un capo profe y explicar tan bien L:-D)*/
+/*pasé 35 horas haciendo este proyecto en total y las horas volaron, estoy feliz, podría haberlo hecho más sencillo (obvio que si pero algún día cuando sea pro lo sabré), pero recién esoy comenzando y es un gran paso para mi*/
 
 
 
 
 
 
-        
 
 
 
