@@ -31,6 +31,13 @@ h4{font-weight: 400 bold;}
 p{font-weight: 400;}
 li a{font-weight: 400;}
 
+h1{font-size: 50px;}
+p{font-size: 16px;}
+
+header, .section1, .between, .section2, .titulo, .section3, .between2, .navlinks, footer{
+    display: flex;
+}
+
 body {
     font-family: 'Be Vietnam Pro', sans-serif;
     color: var(--blumarine);
@@ -42,7 +49,6 @@ body {
 /* B luego continua ciertas directrices para el contenedor header y con las de los subcontenedores, tanto en comportamiento como en diseño para lograr tener el logo a la izquierda, una barra de navegación al medio y el botón y/el menu de hamburguesa a la derecha, espaciados para distinguir su contenido*/
 
 header{
-    display: flex;
     justify-content: space-around;
     align-items: center;
     height: 100px;
@@ -73,7 +79,7 @@ header button{
 /* C luego decidí dividir por secciones, y tenemos en la primera una imagen y una información con título, escritura y un botón, en first mobile dejamos todo en una columna y en desktop es hacer un wrap (que se verá más abajo) para que la imagen quede al lado izquierdo de la pantalla y los textos con el botón al ldo derecho*/
 
 .section1 {
-    display: flex;
+
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
@@ -89,7 +95,6 @@ header button{
     width: 410px;
     height: 228px;
     text-align: right;
-    font-size: 50px;
     color: var(--h1);
 }
 .section1 p{ 
@@ -119,7 +124,6 @@ button:hover{
 /* D luego tenemos un bloque en la página, que divide informaciones y que también se colocará el título arriba y el texto abajo (columna)*/
 
 .between{
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -151,7 +155,6 @@ button:hover{
 /* E en esta parte tenemos la sección2, la cual se hizo un wrap adelantado, para que cuando se coloque en 480px se junten todas las cards en una línea vertical, en esta ocación el título, preferí dividirlo en un h4 y un strong para poder tener ambos en la misma línea y darle un formato distinto a cada uno*/
 
 .section2{
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -189,7 +192,6 @@ button:hover{
 /* F el título de las card, por una cuestión de practicidad, preferí colocarlo fuera de la sección pero apuntando directamente a ella, por un tema de énfasis y espacio y a la vez me fue más complejo ponerlo todo junto*/
 
 .titulo{
-    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -201,7 +203,6 @@ button:hover{
 /* G la sección3 está diseñada con 3 cards de los mejores tenistas del mes, en first móbile sólo se verá una de las 3 por un tema de espacio las otras dos serán ocultas hasta después de los 900px y cada una con un botón*/
 
 .section3{
-    display: flex;
     justify-content: center;
     text-align: center;
     height: 360px;
@@ -237,7 +238,6 @@ button:hover{
 /* H luego sigue otro "entre" o between esta vez llamado "2" que sigue los mismo patrones del anterior, pero que se diferencia por un botón centrado*/
 
 .between2{
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -265,7 +265,6 @@ button:hover{
     width: 100%;
     height: 450px;
     background-color: #1E1E26;
-    display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
@@ -320,7 +319,6 @@ form button{
 footer{
     height: 84px;
     width: auto;
-    display: flex;
     justify-content: center;
     background-color: #1E1E26;
 }
@@ -491,7 +489,7 @@ footer p{
         margin-top: 70px;
     }
     .list li{
-        margin: px;
+        font-size: 16px;
     }
     .logofooter{
         margin-left: 110px;
