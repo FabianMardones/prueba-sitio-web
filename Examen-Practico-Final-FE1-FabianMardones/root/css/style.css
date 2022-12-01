@@ -55,7 +55,6 @@ header{
 }
 nav{
     display: flex;
-    font-size: 13px;
 }
 header nav li{
     list-style-type: none;
@@ -64,6 +63,7 @@ header nav li{
 header nav li a{
     text-decoration: none;
     color: var(--encabezado);
+    font-size: 13px;
 }
 header nav li a:hover{
     color: rgba(36, 46, 82, 0.6);
@@ -113,9 +113,9 @@ header button{
 button{
     background-color:var(--violet);
     color: var(--white);
-    width: 130px;
+    width: 140px;
     border-radius: 50px;
-    height: 40px;
+    height: 50px;
     border: none;
     cursor: pointer;
 }
@@ -154,7 +154,7 @@ button:hover{
     display: none;
 }
 
-/* E en esta parte tenemos la sección2, la cual se hizo un wrap adelantado, para que cuando se coloque en 480px se junten todas las cards en una línea vertical, en esta ocación el título, preferí dividirlo en un h4 y un strong para poder tener ambos en la misma línea y darle un formato distinto a cada uno*/
+/* E en esta parte tenemos la sección2, la cual se hizo un wrap adelantado, para que cuando se coloque en 480px se junten todas las cards en una línea vertical, en esta ocación el título, preferí dividirlo en un h4 y un strong para poder tener ambos en la misma línea y darle un formato distinto a cada uno y el background de h4 le hice un border radius para que se juntara al principio con el strong, por esto la parte de la derecha está redondeada, igual fue un poco de gusto*/
 
 .section2{
     flex-wrap: wrap;
@@ -427,6 +427,7 @@ h5{
         font-size: 30px;
     }
 
+
 /* F creé otras cards para no confundirme y las apilamos todas como el bosquejo, para que se vea una línea de los tenistas, dejando el botón un poco más arriba y mostrando a los dos tenistas ocultos en first mobile*/
 
     .section3 .card{
@@ -486,6 +487,8 @@ h5{
     input {
         height: 40px;
         width: 180px;
+        padding: 20px 10px;
+        margin: 0 5px;
     }
     .list{
         margin-top: 35px;
