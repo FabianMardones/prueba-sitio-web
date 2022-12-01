@@ -25,11 +25,11 @@
     box-sizing: border-box;
 }
 h1{font-weight: 700;}
-h2{font-weight: 500;}
-h3{font-weight: 700;}
+h2{font-weight: 700;}
+h3{font-weight: 500;}
 h4{font-weight: 400 bold;}
-p{font-weight: 400;}
-li a{font-weight: 400;}
+p, h5 {font-weight: 400;}
+li a{font-weight: 500;}
 
 h1{font-size: 50px;}
 p{font-size: 16px;}
@@ -68,12 +68,14 @@ header nav li a{
 header nav li a:hover{
     color: rgba(36, 46, 82, 0.6);
 }
-
 header nav{
     display: none;
 }
 header button{
     display: none;
+}
+.menu-hamburguesa{
+    height: 30px;
 }
 
 /* C luego decidí dividir por secciones, y tenemos en la primera una imagen y una información con título, escritura y un botón, en first mobile dejamos todo en una columna y en desktop es hacer un wrap (que se verá más abajo) para que la imagen quede al lado izquierdo de la pantalla y los textos con el botón al ldo derecho*/
@@ -103,7 +105,7 @@ header button{
     height: 71x;
     text-align: right;
     color: var(--PheaderYh);
-    
+    font-weight: 500 bold;
 }
 .button{
     margin-left: 140px;
@@ -172,6 +174,7 @@ button:hover{
     padding-bottom: 30px;
     border-radius: 30px;
     background-color: var(--barrasection2);
+    color: var(--titlesection2);
 }
 .card strong{
     padding: 10px 20px;
@@ -195,8 +198,9 @@ button:hover{
     align-items: center;
     text-align: center;
     height: 100px;
-    font-size: 25px;
-    margin-bottom: 100px;
+    font-size: 30px;
+    margin: 60px 0;
+    color: var(--titlesection3);
 }
 
 /* G la sección3 está diseñada con 3 cards de los mejores tenistas del mes, en first móbile sólo se verá una de las 3 por un tema de espacio las otras dos serán ocultas hasta después de los 900px y cada una con un botón*/
@@ -292,7 +296,7 @@ form button{
     margin-top: 20px;
 }
 .list li {
-    margin: 10px 70px;
+    margin: 10px 60px;
 }
 .list li a{
     font-size: 16px;
@@ -310,26 +314,22 @@ form button{
 .icon a{
     margin: 0 35px;
 }
-.logofooter{
-    margin-top: 10px;
-}
 
-/* J por último, el footer, charaaaaan!! jaja fin*/
-
-footer{
-    height: 84px;
-    width: auto;
-    justify-content: center;
-    background-color: #1E1E26;
-}
-footer p{
+h5{
+    display: none;
     color: var(--footer);
     font-size: 12.5px;
+}
+.navlinks p{
+    color: var(--white);
+    font-size: 12px;
+    margin-top: 20px;
+    color: var(--footer);
 }
 
 /* luego de todo el sieño mobile first, nos pasamos a la media query, decidí ponerlo de 780px para que al momento de ampliar desde el costado del navegador, se vea más bonito entonces de 480 se verá perfect, y de 1440 también*/
 
-@media only screen and (min-width: 780px) {
+@media only screen and (min-width: 1190px) {
 
     /* A edtiamos el header, para que al momento de contraer la página, se escondan los elementos de navegación junto al botón y quede sólo el logo al lado izquierdo y el menú de hamburguesa al lado derecho*/
 
@@ -470,17 +470,17 @@ footer p{
         background-color: aquamarine;
     }
 
-/* H esta fue la peor parte, jaja, pareció como jugar a un puzzle, 6 horas estve en esto hasta que con un simple movimiento lo logré gracias a Dios, me dormí a las 2am así que no lo muevas XD (cambié el color en el HTML de los SVG del logo fill:#FFFFF)*/
+/* H esta fue la peor parte, jaja, pareció como jugar a un puzzle, 7 horas estve en esto hasta que con un simple movimiento lo logré gracias a Dios, me dormí a las 2am así que no lo muevas XD (cambié el color en el HTML de los SVG del logo fill:#FFFFF)*/
 
     .navlinks{
-        height: 224px;
+        height: 247px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         flex-direction: column;
     }
     form{
-        margin-bottom: 70px;
+        margin-top: 10px;
         margin-right: 130px;
     }
     input {
@@ -488,37 +488,42 @@ footer p{
         width: 180px;
     }
     .list{
-        margin-top: 70px;
+        margin-top: 35px;
     }
-    .list li{
+    .list li a{
         font-size: 16px;
+        font-weight: 400;
     }
     .logofooter{
         margin-left: 110px;
-        margin-top: 70px;
+        margin-top: 30px;
     }
     .icon{
         margin-left: 150px;
-        margin-top: 70px;
+        margin-top: 30px;
     }
     .icon a{
         margin: 0 5px;
     }
-
-/* I por último el footer, eso... jajaja XD fin*/
-
-    footer{
-        display: flex;
-        justify-content: flex-end;
-        height: 50px;
+    footer p{
+        color: #8C8C94;
+        margin-top: 50px;
     }
-    footer p {
-        margin: 0 150px;
+
+    h5{
+        display: block;
+        color: var(--footer);
+        font-size: 12.5px;
+        margin-top: 20px;
+    }
+
+    footer .navlinks p{
+        display:none;
     }
 }
 /*quiero mencionar en esta nota, que jamás en mi vida tuve noción de programación legué desde -20 XD ni si quiera desde 0 y siento que he aprendido muchísimo en estos dos meses, gracias por ser un capo profe y explicar tan bien L:-D)*/
-/*pasé 35 horas haciendo este proyecto en total y las horas volaron, estoy feliz, podría haberlo hecho más sencillo (obvio que si pero algún día cuando sea pro lo sabré), pero recién esoy comenzando y es un gran paso para mi*/
-
+/*pasé 40 horas haciendo este proyecto en total y las horas volaron, estoy feliz, podría haberlo hecho más sencillo (obvio que si pero algún día cuando sea pro lo sabré), pero recién esoy comenzando y es un gran paso para mi*/
+/*Por último, para beneficiar el diseño, pisé algunas propiedades sobre las estipuladas en la primera parte del CSS por un tema de que fui variando con las etiquetas de escritura, y además en el figma habían distinto tipos de grosor para los distintos textos, por eso tuve que ir probando*/
 
 
 
